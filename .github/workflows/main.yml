@@ -5,7 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     name: Test
     steps:
+
       - name: Checkout
         uses: actions/checkout@v2
+
+      - run: pwd
+      - run: ls
+
       - name: Test Action
         run: entrypoint_test.sh
