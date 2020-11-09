@@ -1,16 +1,8 @@
-# action.yml
-name: 'Get Tag'
-description: 'Gets a tag if it exists otherwise returns the commit'
-# inputs:
-#   who-to-greet:  # id of input
-#     description: 'Who to greet'
-#     required: true
-#     default: 'World'
+name: 'Get Tag or SHA'
+description: 'Gets the release name if it exists otherwise returns the commit id'
 outputs:
-  tag: # id of output
-    description: 'The tag or commit'
+  tag:
+    description: 'The release name or commit'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  # args:
-  #   - ${{ inputs.who-to-greet }}
