@@ -3,8 +3,6 @@
 # Default GITHUB_SHA
 tag=${GITHUB_SHA}
 
-echo "Event name ${GITHUB_EVENT_NAME}"
-
 # If release parse the tag name from GITHUB_REF
 if [ "${GITHUB_EVENT_NAME}" == "release" ]; then
   ref="${GITHUB_REF}"
