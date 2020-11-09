@@ -10,4 +10,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Test Action
-        run: ./entrypoint_test.sh
+        run: bash ./entrypoint_test.sh
