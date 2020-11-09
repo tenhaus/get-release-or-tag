@@ -1,13 +1,12 @@
 #!/bin/sh -l
 
-printenv
-
+# Default GITHUB_SHA
 tag=${GITHUB_SHA}
 
-if [ -z ${GITHUB_REF} ]; then
-  tag="${GITHUB_SHA}"
-else
-  tag="${GITHUB_REF}"
+# If release parse the tag name from GITHUB_REF
+if [ "${GITHUB_EVENT_NAME}" == "release" ]; then
+  ref="${GITHUB_REF}"
+  tag=$(echo $GITHUB_REF | sed 's/refs\/tags\///g')
 fi
 
 echo "::set-output name=tag::$tag"
