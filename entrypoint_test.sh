@@ -1,13 +1,8 @@
 #!/bin/sh -l
 
-if [ "-z" ${GITHUB_SHA} ]; then
-  export GITHUB_SHA=7dd2b57bb0ff93fd830a7c6346b5d35257594389
-fi
 
-if [ "-z" ${GITHUB_REF} ]; then
-  export GITHUB_REF=refs/tags/0.10
-fi
-
+export GITHUB_SHA=7dd2b57bb0ff93fd830a7c6346b5d35257594389
+export GITHUB_REF=refs/tags/0.10
 
 # Test Release
 export GITHUB_EVENT_NAME=release
