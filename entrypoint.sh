@@ -1,6 +1,11 @@
 #!/bin/sh -l
 
-echo "Hello $1"
-tag=$(date)
-printenv
+tag=${GITHUB_SHA}
+
+if [ -z ${GITHUB_REF} ]; then
+  tag="${GITHUB_SHA}"
+else
+  tag="${GITHUB_REF}"
+fi
+
 echo "::set-output name=tag::$tag"
