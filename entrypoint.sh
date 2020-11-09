@@ -1,4 +1,4 @@
-#!/bin/sh -l
+#!/usr/bin/env bash
 
 # Default GITHUB_SHA
 tag="${GITHUB_SHA}"
