@@ -1,5 +1,9 @@
 name: 'Get Tag or SHA'
 description: 'Gets the release name if it exists otherwise returns the commit id'
+author: Chris Hayen
+branding:
+  icon: at-sign
+  color: red
 outputs:
   tag:
     description: 'The release name or commit'
