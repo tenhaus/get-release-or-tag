@@ -1,5 +1,7 @@
 #!/bin/sh -l
 
+printenv
+
 tag=${GITHUB_SHA}
 
 if [ -z ${GITHUB_REF} ]; then
